@@ -1,32 +1,48 @@
 # Terraform-AWS-EC2-Provisioning-Basic-Infrastructure-as-Code-
-This project demonstrates how to provision an AWS EC2 instance using Terraform with variables and provider version constraints.
 # Terraform AWS EC2 Provisioning
 
-This project demonstrates how to create an AWS EC2 instance using Terraform.
-It focuses on Infrastructure as Code (IaC) basics such as providers, variables,
-resource creation, and outputs.
-
-The EC2 instance is created in the AWS Mumbai region (`ap-south-1`) using
-Terraform-managed configuration.
+This project demonstrates how to provision an AWS EC2 instance using Terraform.
+It is designed to showcase Infrastructure as Code (IaC) fundamentals with
+variables, provider versioning, and outputs.
 
 ---
 
 ## Features
 - AWS provider with version locking
-- Parameterized configuration using variables
-- EC2 instance provisioning
-- Outputs the public IP address of the instance
-- Clean and simple Terraform structure
+- Parameterized configuration using Terraform variables
+- EC2 instance creation
+- Outputs the EC2 public IP address
 
 ---
 
 ## Prerequisites
-Before running this project, ensure you have:
 - Terraform installed
-- AWS CLI installed and configured
-- An existing EC2 key pair in AWS
-- An AWS account with permissions to create EC2 instances
+- AWS CLI configured with your credentials
+- Existing AWS EC2 key pair
 
 ---
 
-## Project Structure
+## Usage
+1. Initialize Terraform:
+    terraform init
+
+2. Preview the execution plan:
+    terraform plan
+
+3. Apply the configuration:
+    terraform apply
+
+4. Destroy resources (optional):
+    terraform destroy
+
+Notes
+
+This project uses the default VPC and default security group.
+
+SSH access requires a public subnet, Internet Gateway, and proper security group rules.
+
+For production use, define VPC, subnets, route tables, and security groups explicitly.
+
+
+
+   
